@@ -10,30 +10,75 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
+# Realtime Pagination list/grid view for Firestore
+Flutter library for displaying realtime paginated list view or gird view based on screensize.
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
+- Firestore Realtime pagination
+- List view style
+- Waterflow Grid view style
+
+
+---
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add dependency
+```
+dependencies:
+  paginate_firestore: # latest version
+
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+For List View
 
 ```dart
-const like = 'sample';
+    HAFirestoreRealtimePaginatedView.list(
+      scrollPadding: EdgeInsets.only(bottom: 90),
+      query: FirebaseFirestore.instance.collection("users")
+          .where("isDeleted", isEqualTo: false)
+          .orderBy("addedDate", descending: true),
+      limit: 10,
+      builder: (context, snapshot) {
+         Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
+        return ListTile(
+          title: Text(data['name'] ?? "no name"),
+        );
+      },
+      emptyWidget: Center(
+        child: Text("no data found"),
+      ),
+    )
 ```
 
-## Additional information
+For Grid View 
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+    HAFirestoreRealtimePaginatedView.grid(
+      maxCrossAxisExtent: 380,
+      scrollPadding: EdgeInsets.only(bottom: 90),
+      query: FirebaseFirestore.instance
+          .collection("users")
+          .where("isDeleted", isEqualTo: false)
+          .orderBy("addedDate", descending: true),
+      limit: 10,
+      builder: (context, snapshot) {
+        Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
+        return ListTile(
+          title: Text(data['name'] ?? "no name"),
+        );
+      },
+      emptyWidget: Center(
+        child: Text("no data found"),
+      ),
+    );
+```
+# Contributions
+
+Feel free to contribute to this project.
+
+If you find a bug or want a feature, but don't know how to fix/implement it, please fill an issue. If you fixed a bug or implemented a feature, please send a pull request.
+
+
