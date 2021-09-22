@@ -3,6 +3,7 @@ library ha_firestore_paginated_list;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ha_firestore_paginated_list/realtime_pagination_model.dart';
+import 'package:lazy_load_scrollview/lazy_load_scrollview.dart';
 
 import 'ha_list_item_view.dart';
 
@@ -76,24 +77,21 @@ class _HAFirestoreRealtimePaginatedViewState
           if (widget.filter != null) {
             listData = listData?.where(widget.filter!).toList() ?? [];
           }
-          return HAListItemView(
-            builder: widget.builder,
-            data: listData,
-            groupByField: widget.groupBy,
-            header: widget.header,
-            maxCrossAxisExtent: widget.maxCrossAxisExtent,
-            scrollPadding: widget.scrollPadding,
-            style: widget.style,
-          );
 
-          // return LazyLoadScrollView(
-          //   onEndOfPage: () {
-          //     model.requestNextPage();
-          //   },
-          //   child: (widget.maxCrossAxisExtent ?? 0) > 0
-          //       ? buildWaterfallFlow(listData, context)
-          //       : buildListView(listData, context),
-          // );
+          return LazyLoadScrollView(
+            onEndOfPage: () {
+              model.requestNextPage();
+            },
+            child: HAListItemView(
+              builder: widget.builder,
+              data: listData,
+              groupByField: widget.groupBy,
+              header: widget.header,
+              maxCrossAxisExtent: widget.maxCrossAxisExtent,
+              scrollPadding: widget.scrollPadding,
+              style: widget.style,
+            ),
+          );
         } else {
           return widget.emptyWidget ?? Container();
         }
