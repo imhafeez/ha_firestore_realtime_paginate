@@ -26,7 +26,7 @@ Flutter library for displaying realtime paginated list view or gird view based o
 Add dependency
 ```
 dependencies:
-  paginate_firestore: # latest version
+  ha_firestore_paginated_list: # latest version
 
 ```
 
