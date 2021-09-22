@@ -20,33 +20,19 @@ class HAFirestoreRealtimePaginatedView extends StatefulWidget {
   final Widget Function(dynamic)? header;
   final String? groupBy;
   final ListViewStyle style;
-  HAFirestoreRealtimePaginatedView.list(
+  HAFirestoreRealtimePaginatedView(
       {Key? key,
       this.query,
       this.builder,
-      this.limit: 10,
+      this.limit = 10,
       this.emptyWidget,
       this.sort,
       this.filter,
       this.scrollPadding: const EdgeInsets.all(0),
+      this.maxCrossAxisExtent = 350,
       this.header,
       this.groupBy,
-      this.style: ListViewStyle.ListStyle})
-      : super(key: key);
-
-  HAFirestoreRealtimePaginatedView.grid(
-      {Key? key,
-      required this.maxCrossAxisExtent,
-      this.query,
-      this.builder,
-      this.limit: 10,
-      this.emptyWidget,
-      this.sort,
-      this.filter,
-      this.header,
-      this.groupBy,
-      this.scrollPadding: const EdgeInsets.all(0),
-      this.style: ListViewStyle.GridStyle})
+      this.style = ListViewStyle.ListStyle})
       : super(key: key);
 
   @override

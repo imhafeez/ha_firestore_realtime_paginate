@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ha_firestore_paginated_list/ha_firestore_paginated_list.dart';
+import 'package:ha_firestore_paginated_list/ha_list_item_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: HAFirestoreRealtimePaginatedView.list(
+      body: HAFirestoreRealtimePaginatedView(
+        style: ListViewStyle.AutoStyle,
         scrollPadding: const EdgeInsets.only(bottom: 90),
         query: FirebaseFirestore.instance
             .collection("users")

@@ -32,10 +32,10 @@ dependencies:
 
 ## Usage
 
-For List View
 
 ```dart
-    HAFirestoreRealtimePaginatedView.list(
+    HAFirestoreRealtimePaginatedView(
+      style: ListViewStyle.AutoStyle,
       scrollPadding: EdgeInsets.only(bottom: 90),
       query: FirebaseFirestore.instance.collection("users")
           .where("isDeleted", isEqualTo: false)
@@ -53,28 +53,7 @@ For List View
     )
 ```
 
-For Grid View 
 
-```dart
-    HAFirestoreRealtimePaginatedView.grid(
-      maxCrossAxisExtent: 380,
-      scrollPadding: EdgeInsets.only(bottom: 90),
-      query: FirebaseFirestore.instance
-          .collection("users")
-          .where("isDeleted", isEqualTo: false)
-          .orderBy("addedDate", descending: true),
-      limit: 10,
-      builder: (context, snapshot) {
-        Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
-        return ListTile(
-          title: Text(data['name'] ?? "no name"),
-        );
-      },
-      emptyWidget: Center(
-        child: Text("no data found"),
-      ),
-    );
-```
 # Contributions
 
 Feel free to contribute to this project.
