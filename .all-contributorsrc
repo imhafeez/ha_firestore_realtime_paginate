@@ -13,6 +13,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "imhafeez",
+      "name": "Hafeez Ahmed",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21155655?v=4",
+      "profile": "https://github.com/imhafeez",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
