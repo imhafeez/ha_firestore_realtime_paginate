@@ -98,8 +98,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/hilalbaig/"><img src="https://avatars.githubusercontent.com/u/4985879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Baig</b></sub></a><br /><a href="https://github.com/imhafeez/ha_firestore_realtime_paginate/commits?author=hilalbaig" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/imhafeez"><img src="https://avatars.githubusercontent.com/u/21155655?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hafeez Ahmed</b></sub></a><br /><a href="https://github.com/imhafeez/ha_firestore_realtime_paginate/commits?author=imhafeez" title="Code">💻</a></td>
+   <td align="center"><a href="https://www.linkedin.com/in/hilalbaig/"><img src="https://avatars.githubusercontent.com/u/4985879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Baig</b></sub></a><br /><a href="https://github.com/imhafeez/ha_firestore_realtime_paginate/commits?author=hilalbaig" title="Documentation">📖</a></td>
   </tr>
 </table>
 
