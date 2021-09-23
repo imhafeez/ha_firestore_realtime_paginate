@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:ha_firestore_paginated_list/layout/screen_type_layout.dart';
-import 'package:ha_firestore_paginated_list/utils/converters.dart';
+import 'package:ha_firestore_realtime_paginate/layout/screen_type_layout.dart';
+import 'package:ha_firestore_realtime_paginate/utils/converters.dart';
 import 'package:intl/intl.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 import 'package:waterfall_flow/waterfall_flow.dart';

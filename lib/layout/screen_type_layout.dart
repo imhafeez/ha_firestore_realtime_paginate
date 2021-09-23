@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ha_firestore_paginated_list/layout/responsive_builder.dart';
-import 'package:ha_firestore_paginated_list/layout/ui_utils.dart';
+import 'package:ha_firestore_realtime_paginate/layout/responsive_builder.dart';
+import 'package:ha_firestore_realtime_paginate/layout/ui_utils.dart';
 
 class ScreenTypeLayout extends StatelessWidget {
   final Widget? mobile;

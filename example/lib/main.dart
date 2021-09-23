@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:ha_firestore_paginated_list/ha_firestore_paginated_list.dart';
-import 'package:ha_firestore_paginated_list/ha_list_item_view.dart';
+import 'package:ha_firestore_realtime_paginate/ha_firestore_paginated_list.dart';
+import 'package:ha_firestore_realtime_paginate/ha_list_item_view.dart';
 
 void main() {
   runApp(const MyApp());

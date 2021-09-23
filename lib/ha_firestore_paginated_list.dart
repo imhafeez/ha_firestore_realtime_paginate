@@ -1,8 +1,8 @@
-library ha_firestore_paginated_list;
+library ha_firestore_realtime_paginate;
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:ha_firestore_paginated_list/realtime_pagination_model.dart';
+import 'package:ha_firestore_realtime_paginate/realtime_pagination_model.dart';
 import 'package:lazy_load_scrollview/lazy_load_scrollview.dart';
 
 import 'ha_list_item_view.dart';

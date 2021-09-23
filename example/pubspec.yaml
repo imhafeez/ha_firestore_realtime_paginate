@@ -26,7 +26,7 @@ dependencies:
     sdk: flutter
 
   cloud_firestore: "^2.5.3"
-  ha_firestore_paginated_list:
+  ha_firestore_realtime_paginate:
     path: ../
 
  

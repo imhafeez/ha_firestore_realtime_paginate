@@ -128,7 +128,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  ha_firestore_paginated_list:
+  ha_firestore_realtime_paginate:
     dependency: "direct main"
     description:
       path: ".."

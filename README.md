@@ -17,6 +17,7 @@ Flutter library for displaying realtime paginated list view or gird view based o
 
 - Firestore Realtime pagination
 - List view style
+- Grouped List View
 - Waterflow Grid view style
 
 
@@ -26,7 +27,7 @@ Flutter library for displaying realtime paginated list view or gird view based o
 Add dependency
 ```
 dependencies:
-  ha_firestore_paginated_list: # latest version
+  ha_firestore_realtime_paginate: # latest version
 
 ```
 
