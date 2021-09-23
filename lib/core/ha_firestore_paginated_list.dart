@@ -1,26 +1,37 @@
-library ha_firestore_realtime_paginate;
+part of ha_firestore_realtime_paginate;
 
-export 'ha_list_item_view.dart';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
-import 'package:ha_firestore_realtime_paginate/realtime_pagination_model.dart';
-import 'package:lazy_load_scrollview/lazy_load_scrollview.dart';
-
-import 'ha_list_item_view.dart';
-
+/// HAFirestoreRealtimePaginatedView
 class HAFirestoreRealtimePaginatedView extends StatefulWidget {
+  /// Firestore collection query
   final Query? query;
+
+  /// Specify the page limit for each page
   final int? limit;
+
+  /// Widget for each cell in the list
   final Widget Function(BuildContext context, DocumentSnapshot snapshot)?
       builder;
+
+  /// Widget to show when there is no record from specified query
   final Widget? emptyWidget;
+
+  /// Scroll padding for ListView
   final EdgeInsets scrollPadding;
+
+  /// maxCrossAxisExtent for Grid View
   double? maxCrossAxisExtent;
   // final int Function(DocumentSnapshot a, DocumentSnapshot b)? sort;
+
+  /// Add a filter to the result
   final bool Function(DocumentSnapshot a)? filter;
+
+  /// return a header widget in case of grouped view
   final Widget Function(dynamic)? header;
+
+  /// Specify a document field to groupBy the records
   final String? groupBy;
+
+  /// List style List or Grid
   final ListViewStyle style;
 
   HAFirestoreRealtimePaginatedView(
