@@ -1,5 +1,7 @@
 library ha_firestore_realtime_paginate;
 
+export 'ha_list_item_view.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ha_firestore_realtime_paginate/realtime_pagination_model.dart';
@@ -15,18 +17,18 @@ class HAFirestoreRealtimePaginatedView extends StatefulWidget {
   final Widget? emptyWidget;
   final EdgeInsets scrollPadding;
   double? maxCrossAxisExtent;
-  final int Function(DocumentSnapshot a, DocumentSnapshot b)? sort;
+  // final int Function(DocumentSnapshot a, DocumentSnapshot b)? sort;
   final bool Function(DocumentSnapshot a)? filter;
   final Widget Function(dynamic)? header;
   final String? groupBy;
   final ListViewStyle style;
+
   HAFirestoreRealtimePaginatedView(
       {Key? key,
       this.query,
       this.builder,
       this.limit = 10,
       this.emptyWidget,
-      this.sort,
       this.filter,
       this.scrollPadding: const EdgeInsets.all(0),
       this.maxCrossAxisExtent = 350,

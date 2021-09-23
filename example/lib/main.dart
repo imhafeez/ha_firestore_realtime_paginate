@@ -46,6 +46,13 @@ class _MyHomePageState extends State<MyHomePage> {
             .collection("users")
             .orderBy("addedDate", descending: true),
         limit: 10,
+        groupBy: "addedDate",
+        header: (groupFieldValue) {
+          return Container(
+            color: Colors.white,
+            child: Text("$groupFieldValue"),
+          );
+        },
         builder: (context, snapshot) {
           Map<String, dynamic> data = snapshot.data() as Map<String, dynamic>;
           return ListTile(

@@ -10,7 +10,7 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
-# Realtime Pagination list/grid view for Firestore
+# Firestore Realtime Paginationed list or grid view 
 Flutter library for displaying realtime paginated list view or gird view based on screensize.
 ## Features
 
@@ -53,8 +53,30 @@ dependencies:
       ),
     )
 ```
+### Grouping (Sticky Headers)
 
+You can group your listing by passing ``` groupBy ``` field and your ``` header ``` widget in the ``` HAFirestoreRealtimePaginatedView ``` constructor.
 
+```dart
+HAFirestoreRealtimePaginatedView(
+  ...
+  groupBy: "addedDate",
+  header: (groupFieldValue) {
+    return Container(
+      color: Colors.white,
+      child: Text("$groupFieldValue"),
+    );
+  },
+  ...
+)
+```
+### Filter
+
+You can apply filter for not to include a document in the listing
+
+```dart
+bool Function(DocumentSnapshot a)? filter
+```
 # Contributions
 
 Feel free to contribute to this project.
