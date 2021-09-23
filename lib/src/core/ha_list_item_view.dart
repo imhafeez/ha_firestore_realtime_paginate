@@ -1,19 +1,20 @@
 part of ha_firestore_realtime_paginate;
 
-enum ListViewStyle { ListStyle, GridStyle, AutoStyle }
+enum ListViewStyle { list, grid, auto }
 
 class HAListItemView extends StatelessWidget {
-  ListViewStyle style;
-  EdgeInsets? scrollPadding;
-  List<dynamic>? data;
-  Widget Function(dynamic)? header;
-  String? groupByField;
-  Widget Function(BuildContext context, DocumentSnapshot snapshot)? builder;
+  final ListViewStyle style;
+  final EdgeInsets? scrollPadding;
+  final List<dynamic>? data;
+  final Widget Function(dynamic)? header;
+  final String? groupByField;
+  final Widget Function(BuildContext context, DocumentSnapshot snapshot)?
+      builder;
 
-  double? maxCrossAxisExtent;
-  HAListItemView({
+  final double? maxCrossAxisExtent;
+  const HAListItemView({
     Key? key,
-    this.style: ListViewStyle.AutoStyle,
+    this.style = ListViewStyle.list,
     this.scrollPadding,
     this.data,
     this.groupByField,
@@ -24,9 +25,9 @@ class HAListItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return style == ListViewStyle.ListStyle
+    return style == ListViewStyle.list
         ? buildListView(data, context)
-        : (style == ListViewStyle.GridStyle)
+        : (style == ListViewStyle.grid)
             ? buildWaterfallFlow(data, context)
             : ScreenTypeLayout(
                 mobile: buildListView(data, context),

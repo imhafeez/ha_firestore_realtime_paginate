@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: HAFirestoreRealtimePaginatedView(
-        style: ListViewStyle.AutoStyle,
+        style: ListViewStyle.auto,
         scrollPadding: const EdgeInsets.only(bottom: 90),
         query: FirebaseFirestore.instance
             .collection("users")

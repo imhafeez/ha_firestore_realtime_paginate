@@ -5,9 +5,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class RealtimePaginatinModel {
   Query? query;
   final int? limit;
-  RealtimePaginatinModel({required this.query, this.limit: 10});
+  RealtimePaginatinModel({required this.query, this.limit = 10});
 
-  StreamController<List<DocumentSnapshot>> _streamController =
+  final StreamController<List<DocumentSnapshot>> _streamController =
       StreamController<List<DocumentSnapshot>>.broadcast();
   DocumentSnapshot? lastDocument;
   List<List<DocumentSnapshot>> documentPages = [];
@@ -22,7 +22,7 @@ class RealtimePaginatinModel {
     if (lastDocument != null) {
       query = query!.startAfterDocument(lastDocument!);
     }
-    ;
+
     return query;
   }
 
@@ -55,7 +55,7 @@ class RealtimePaginatinModel {
 
           isRequesting = false;
         } else {
-          if (snapshot.docChanges.length > 0) {
+          if (snapshot.docChanges.isNotEmpty) {
             _streamController.add([]);
           }
         }

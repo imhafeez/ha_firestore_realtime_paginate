@@ -1,8 +1,10 @@
 # example
 
-A new Flutter project.
+Example for ``` HAFirestoreRealtimePaginatedView ```.
 
 ## Getting Started
+
+You need to integarte your own firebase project and change the ``` query ``` accordingly to run the example. 
 
 This project is a starting point for a Flutter application.
 

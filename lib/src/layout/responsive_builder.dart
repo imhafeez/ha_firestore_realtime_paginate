@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ha_firestore_realtime_paginate/layout/sizing_information.dart';
-import 'package:ha_firestore_realtime_paginate/layout/ui_utils.dart';
+import 'package:ha_firestore_realtime_paginate/src/layout/sizing_information.dart';
+import 'package:ha_firestore_realtime_paginate/src/layout/ui_utils.dart';
 
 class ResponsiveBuilder extends StatelessWidget {
   final Widget? Function(

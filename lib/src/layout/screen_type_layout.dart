@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ha_firestore_realtime_paginate/layout/responsive_builder.dart';
-import 'package:ha_firestore_realtime_paginate/layout/ui_utils.dart';
+import 'package:ha_firestore_realtime_paginate/src/layout/responsive_builder.dart';
+import 'package:ha_firestore_realtime_paginate/src/layout/ui_utils.dart';
 
 class ScreenTypeLayout extends StatelessWidget {
   final Widget? mobile;
@@ -13,13 +13,13 @@ class ScreenTypeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
-        if (sizingInformation.deviceScreenType == DeviceScreenType.Tablet) {
+        if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
           if (tablet != null) {
             return tablet;
           }
         }
 
-        if (sizingInformation.deviceScreenType == DeviceScreenType.Desktop) {
+        if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
           if (desktop != null) {
             return desktop;
           } else {

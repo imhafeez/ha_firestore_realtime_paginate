@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ha_firestore_realtime_paginate/layout/ui_utils.dart';
+import 'package:ha_firestore_realtime_paginate/src/layout/ui_utils.dart';
 
 class SizingInformation {
   final DeviceScreenType? deviceScreenType;
