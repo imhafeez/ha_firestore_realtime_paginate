@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "hilalbaig",
+      "name": "Baig",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4985879?v=4",
+      "profile": "https://www.linkedin.com/in/hilalbaig/",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ha_firestore_realtime_paginate",
+  "projectOwner": "imhafeez",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
