@@ -12,20 +12,17 @@ and the Flutter guide for
 -->
 # Firestore Realtime Pagination view 
 Flutter library for displaying realtime paginated list view or gird view based on screensize.
-
 [![](http://flutter-badge.zaynjarvis.com/version/{ha_firestore_realtime_paginate})](https://pub.dartlang.org/packages/{ha_firestore_realtime_paginate})
 [![](http://flutter-badge.zaynjarvis.com/score/{ha_firestore_realtime_paginate})](https://pub.dartlang.org/packages/{ha_firestore_realtime_paginate})
 
 ## Features
-
-
 - Firestore Realtime pagination
 - List view style
 - Grouped List View
 - Waterflow Grid view style
 
 
----
+
 ## Getting started
 
 Add dependency
