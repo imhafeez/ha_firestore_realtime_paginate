@@ -4,7 +4,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center">
-	<a href="https://pub.dev/packages/ha_firestore_sacffold"><img src="https://img.shields.io/pub/v/ha_firestore_sacffold.svg" alt="Pub.dev Badge"></a>
+	<a href="https://pub.dev/packages/ha_firestore_realtime_paginate"><img src="https://img.shields.io/pub/v/ha_firestore_realtime_paginate.svg" alt="Pub.dev Badge"></a>
 	<!-- <a href="https://github.com/imhafeez/ha_firestore_sacffold/actions"><img src="https://github.com/imhafeez/ha_firestore_sacffold/workflows/build/badge.svg" alt="GitHub Build Badge"></a> -->
 	<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="MIT License Badge"></a>
 	<a href="https://github.com/imhafeez/ha_firestore_sacffold"><img src="https://img.shields.io/badge/platform-flutter-ff69b4.svg" alt="Flutter Platform Badge"></a>
