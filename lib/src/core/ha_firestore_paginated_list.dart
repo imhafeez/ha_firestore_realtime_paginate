@@ -70,7 +70,11 @@ class _HAFirestoreRealtimePaginatedViewState
     return StreamBuilder<List<DocumentSnapshot>>(
       stream: model.stream,
       builder: (context, snapshot) {
-        if ((snapshot.data?.length ?? 0) > 0) {
+        if (!snapshot.hasData) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        } else if ((snapshot.data?.length ?? 0) > 0) {
           List<DocumentSnapshot>? listData = snapshot.data;
 
           if (widget.filter != null) {
