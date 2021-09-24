@@ -57,6 +57,8 @@ class RealtimePaginatinModel {
         } else {
           if (snapshot.docChanges.isNotEmpty) {
             _streamController.add([]);
+          } else if (documentPages.isEmpty) {
+            _streamController.add([]);
           }
         }
       });
