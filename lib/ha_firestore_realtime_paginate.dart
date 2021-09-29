@@ -13,5 +13,5 @@ import 'package:collection/collection.dart';
 import 'package:ha_firestore_realtime_paginate/src/core/realtime_pagination_model.dart';
 import 'package:lazy_load_scrollview/lazy_load_scrollview.dart';
 
-part '/src/core/ha_list_item_view.dart';
-part '/src/core/ha_firestore_paginated_list.dart';
+export 'package:ha_firestore_realtime_paginate/src/core/ha_list_item_view.dart';
+export 'package:ha_firestore_realtime_paginate/src/core/ha_firestore_paginated_list.dart';
