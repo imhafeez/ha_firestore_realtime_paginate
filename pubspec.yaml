@@ -1,6 +1,6 @@
 name: ha_firestore_realtime_paginate
 description: A package for Firestore to get realtime paginated list.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/imhafeez/ha_firestore_realtime_paginate
 
 environment:
