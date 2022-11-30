@@ -19,16 +19,23 @@ class HAListItemView extends StatelessWidget {
       builder;
 
   final double? maxCrossAxisExtent;
-  const HAListItemView({
-    Key? key,
-    this.style = ListViewStyle.list,
-    this.scrollPadding,
-    this.data,
-    this.groupByField,
-    this.header,
-    this.builder,
-    this.maxCrossAxisExtent,
-  }) : super(key: key);
+
+  final ScrollPhysics? physics;
+
+  final bool shrinkWrap;
+
+  const HAListItemView(
+      {Key? key,
+      this.style = ListViewStyle.list,
+      this.scrollPadding,
+      this.data,
+      this.groupByField,
+      this.header,
+      this.builder,
+      this.maxCrossAxisExtent,
+      this.physics,
+      this.shrinkWrap = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -125,6 +132,8 @@ class HAListItemView extends StatelessWidget {
       );
     } else {
       return ListView(
+        physics: physics,
+        shrinkWrap: shrinkWrap,
         padding: scrollPadding,
         children: listData!.map((e) => builder!(context, e)).toList(),
       );

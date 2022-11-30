@@ -41,19 +41,23 @@ class HAFirestoreRealtimePaginatedView extends StatefulWidget {
   /// List style List or Grid
   final ListViewStyle style;
 
-  const HAFirestoreRealtimePaginatedView(
-      {Key? key,
-      this.query,
-      this.builder,
-      this.limit = 10,
-      this.emptyWidget,
-      this.filter,
-      this.scrollPadding = const EdgeInsets.all(0),
-      this.maxCrossAxisExtent = 350,
-      this.header,
-      this.groupBy,
-      this.style = ListViewStyle.list})
-      : super(key: key);
+  // final ScrollPhysics? physics;
+
+  // final bool? shrinkWrap;
+
+  const HAFirestoreRealtimePaginatedView({
+    Key? key,
+    this.query,
+    this.builder,
+    this.limit = 10,
+    this.emptyWidget,
+    this.filter,
+    this.scrollPadding = const EdgeInsets.all(0),
+    this.maxCrossAxisExtent = 350,
+    this.header,
+    this.groupBy,
+    this.style = ListViewStyle.list,
+  }) : super(key: key);
 
   @override
   _HAFirestoreRealtimePaginatedViewState createState() =>
